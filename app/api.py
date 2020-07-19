@@ -3,9 +3,8 @@ from typing import List
 from fastapi import Depends, FastAPI
 from sqlalchemy.orm import Session
 
-import models
-import schemas
-from database import SessionLocal, engine
+from app import models, schemas
+from app.database import SessionLocal, engine
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -30,6 +29,7 @@ async def root():
 async def users_get(offset: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = db.query(models.User).offset(offset).limit(limit).all()
     return users
+
 
 @app.post('/users', response_model=schemas.User)
 def users_create(user: schemas.UserCreate, db: Session = Depends(get_db)):
