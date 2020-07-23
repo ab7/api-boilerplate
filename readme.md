@@ -8,6 +8,7 @@ Starter code for quickly getting up and running on API development using the lat
 * **Database** - PostgreSQL
 * **ORM** - SQLAlchemy
 * **Database Migrations** - Alembic
+* **Formatting** - autopep8
 * **Tests** - pytest
 
 ## Docker Setup
@@ -39,7 +40,13 @@ Starter code for quickly getting up and running on API development using the lat
 
 * To run the linter use the following command:
 
-    docker-compose run --rm api poetry run flake8 .
+        docker-compose run --rm api poetry run flake8 .
+
+## Auto-formatting
+
+* To automatically format the application code using the flake8 config run the following command:
+
+        docker-compose run --rm api poetry run autopep8 -v --in-place --aggressive app/*.py
 
 ## Database setup
 
