@@ -38,6 +38,12 @@ Starter code for quickly getting up and running on API development using the lat
 
 ## Linting
 
+* The following items are linted:
+
+    - PEP8 (with exception for 100 line length)
+    - PEP257 (docstrings)
+    - Single quotes
+
 * To run the linter use the following command:
 
         docker-compose run --rm api poetry run flake8 .
