@@ -42,6 +42,12 @@ Starter code for quickly getting up and running on API development using the lat
 
         docker-compose run --rm api poetry run flake8 .
 
+## Static type checking
+
+* Static type checking can be run manually or incorporated into your IDE/CI/CD:
+
+        docker-compose run --rm api poetry run mypy app/
+
 ## Auto-formatting
 
 * To automatically format the application code using the flake8 config run the following command:
