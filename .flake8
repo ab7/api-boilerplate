@@ -4,3 +4,4 @@ exclude = .git,__pycache__
 max-complexity = 10
 select = E,F,W,C,Q,D
 docstring-convention = pep257
+ignore = D100,D101
