@@ -58,7 +58,7 @@ Starter code for quickly getting up and running on API development using the lat
 
 * To automatically format the application code using the flake8 config run the following command:
 
-        docker-compose run --rm api poetry run autopep8 -v --in-place --aggressive app/*.py
+        docker-compose run --rm api poetry run autopep8 -v -a -r ./ --in-place
 
 ## Database setup
 

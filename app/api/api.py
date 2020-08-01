@@ -3,8 +3,8 @@ from typing import List, Iterator
 from fastapi import Depends, FastAPI
 from sqlalchemy.orm import Session, sessionmaker  # type: ignore
 
-from app import models, schemas
-from app.database import SessionLocal
+from data import schemas, models
+from data.db import SessionLocal
 
 
 app = FastAPI()
