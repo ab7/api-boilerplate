@@ -52,7 +52,7 @@ Starter code for quickly getting up and running on API development using the lat
 
 * Static type checking can be run manually or incorporated into your IDE/CI/CD:
 
-        docker-compose run --rm api poetry run mypy app/
+        docker-compose run --rm api poetry run mypy api/ data/
 
 ## Auto-formatting
 
