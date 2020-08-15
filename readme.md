@@ -26,6 +26,16 @@ Starter code for quickly getting up and running on API development using the lat
 
         docker-compose down -v
 
+## Tests
+
+* You can run all tests using the following command:
+
+        docker-compose run --rm api poetry run pytest
+
+* You can also run the tests in watch mode:
+
+        docker-compose run --rm api poetry run ptw
+
 ## Logging
 
 * To view api logs:
