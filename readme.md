@@ -70,6 +70,16 @@ Starter code for quickly getting up and running on API development using the lat
 
         docker-compose run --rm api poetry run autopep8 -v -a -r ./ --in-place
 
+## Running pre-commit hooks
+
+**Requires git version 2.9 or higher. Otherwise you must manually add the hooks in .git/hooks.**
+
+* Run the following command to turn on git hooks:
+
+        git config core.hooksPath git-hooks
+
+    The pre-commit runs autopep8, linter, and mypy type checker. These hooks can be turned on or off or additional hooks added in the `git-hooks` directory.
+
 ## Database setup
 
 **Note:** If you changed the database username, password or database name in `db_init.env` you will also need to update them in `docker-compose.yml` and `alembic.ini`.
