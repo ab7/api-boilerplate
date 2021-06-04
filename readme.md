@@ -62,7 +62,7 @@ Starter code for quickly getting up and running on API development using the lat
 
 * Static type checking can be run manually or incorporated into your IDE/CI/CD:
 
-        docker-compose run --rm api poetry run mypy api/ data/
+        docker-compose run --rm api poetry run mypy api/
 
 ## Auto-formatting
 
@@ -86,11 +86,11 @@ Starter code for quickly getting up and running on API development using the lat
 
 * Create migrations for current models:
 
-        docker-compose run --rm api poetry run alembic revision --autogenerate -m "Create users table"
+        docker-compose run -e PYTHONPATH="/app:$PYTHONPATH" --rm api poetry run alembic revision --autogenerate -m "Create users table"
 
 * Apply the migrations:
 
-        docker-compose run --rm api poetry run alembic upgrade head
+        docker-compose run -e PYTHONPATH="/app:$PYTHONPATH" --rm api poetry run alembic upgrade head
 
 You can interact with the database via the command line or GUI. See [TablePlus](https://tableplus.com/) for a decent GUI.
 
