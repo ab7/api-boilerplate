@@ -1,15 +1,12 @@
-import os
-import sys
-
-from alembic import context
+from alembic import context  # type: ignore
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '')))
+from api.db import Base
 
-from db import Base  # noqa: E402
-from models import User  # noqa: E402, F401
+# Simply import new models to auto-generate migrations
+from api.models import User  # noqa: F401
 
 
 # this is the Alembic Config object, which provides

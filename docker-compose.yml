@@ -20,7 +20,7 @@ services:
         volumes:
             - "database-data:/var/lib/postgresql/data/"
         env_file:
-            - "app/data/db_init.env"
+            - "app/db_init.env"
         ports:
             - "5432:5432"
 volumes:
